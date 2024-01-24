@@ -33,6 +33,8 @@ select
         'state_bottle_retail',
         'volume_sold_gallons',
         'invoice_and_item_number',
+        'invoice_id',
+        'line_number',
     ]) }} as _airbyte_iowa_sales_hashid,
     tmp.*
 from {{ ref('iowa_sales_ab2') }} tmp

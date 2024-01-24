@@ -32,6 +32,8 @@ select
     cast(state_bottle_retail as {{ dbt_utils.type_float() }}) as state_bottle_retail,
     cast(volume_sold_gallons as {{ dbt_utils.type_float() }}) as volume_sold_gallons,
     cast(invoice_and_item_number as {{ dbt_utils.type_string() }}) as invoice_and_item_number,
+    substring(cast(invoice_and_item_number as  {{ dbt_utils.type_string() }}),1,10) as invoice_id,
+    substring(cast(invoice_and_item_number as  {{ dbt_utils.type_string() }}),11,15) as line_number,
     _airbyte_ab_id,
     _airbyte_emitted_at,
     {{ current_timestamp() }} as _airbyte_normalized_at

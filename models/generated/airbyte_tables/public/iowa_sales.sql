@@ -48,6 +48,8 @@ select
     state_bottle_retail,
     volume_sold_gallons,
     invoice_and_item_number,
+    invoice_id,
+    line_number,
     _airbyte_ab_id,
     _airbyte_emitted_at,
     {{ current_timestamp() }} as _airbyte_normalized_at,
