@@ -1,0 +1,1 @@
+{"ssl":false,"host":"192.168.7.120","port":5433,"schema":"public","database":"database","password":"meeko","ssl_mode":{"mode":"disable"},"username":"meeko","tunnel_method":{"tunnel_method":"NO_TUNNEL"}}
